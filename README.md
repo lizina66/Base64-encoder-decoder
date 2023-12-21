@@ -1,3 +1,3 @@
 # [演示](https://api.mwm.moe/base64)
 
-![演示](https://jsd.cdn.zzko.cn/gh/lizina66/Base64-encoder-decoder@main/演示.WEBP)
+![演示](https://tc.mwm.moe/i/1/2023/12/22/658477ee490d0.webp)
