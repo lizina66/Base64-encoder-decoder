@@ -57,11 +57,28 @@
     </style>
 </head>
 <body>
+    <?php
+    $encoded = '';
+    $decoded = '';
+
+    if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+        if (isset($_POST['encode'])) {
+            $decoded = $_POST['input1'];
+            $encoded = base64_encode($decoded);
+        }
+
+        if (isset($_POST['decode'])) {
+            $encoded = $_POST['input2'];
+            $decoded = base64_decode($encoded);
+        }
+    }
+    ?>
+
     <div class="container">
         <form method="post">
             <div>
-                <textarea name="input1"><?php echo htmlspecialchars($decoded ?? ''); ?></textarea>
-                <textarea name="input2"><?php echo htmlspecialchars($encoded ?? ''); ?></textarea>
+                <textarea name="input1"><?php echo htmlspecialchars($decoded); ?></textarea>
+                <textarea name="input2"><?php echo htmlspecialchars($encoded); ?></textarea>
             </div>
             <div>
                 <input type="submit" name="encode" value="编码 →">
@@ -75,20 +92,5 @@
         <a href="https://github.com/lizina66/Base64-encoder-decoder">⭐GitHub⭐</a>点个小星星吧
         |&nbsp;
     </div>
-
-    <?php
-    $encoded = '';
-    $decoded = '';
-
-    if (isset($_POST['encode'])) {
-        $decoded = $_POST['input1'];
-        $encoded = base64_encode($decoded);
-    }
-
-    if (isset($_POST['decode'])) {
-        $encoded = $_POST['input2'];
-        $decoded = base64_decode($encoded);
-    }
-    ?>
 </body>
 </html>
