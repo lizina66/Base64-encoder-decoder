@@ -72,7 +72,7 @@
 
     <div class="footer">
         &nbsp;|
-        <a href="https://example.com">⭐GitHub⭐</a>点个小星星吧
+        <a href="https://github.com/lizina66/Base64-encoder-decoder">⭐GitHub⭐</a>点个小星星吧
         |&nbsp;
     </div>
 
